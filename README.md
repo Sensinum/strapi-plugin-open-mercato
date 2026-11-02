@@ -10,11 +10,11 @@
   <a href="https://www.npmjs.org/package/@sensinum/strapi-plugin-open-mercato">
     <img src="https://img.shields.io/npm/dm/@sensinum/strapi-plugin-open-mercato.svg" alt="Monthly download on NPM" />
   </a>
-  <a href="https://circleci.com/gh/VirtusLab-Open-Source/strapi-plugin-open-mercato">
-    <img alt="CircleCI Build Status" src="https://img.shields.io/circleci/build/gh/VirtusLab-Open-Source/strapi-plugin-open-mercato/main?logo=circleci">
+  <a href="https://github.com/Sensinum/strapi-plugin-open-mercato/actions/workflows/ci.yml">
+    <img src="https://github.com/Sensinum/strapi-plugin-open-mercato/actions/workflows/ci.yml/badge.svg" alt="CI" />
   </a>
-  <a href="https://codecov.io/gh/VirtusLab-Open-Source/strapi-plugin-open-mercato">
-    <img alt="codecov" src="https://img.shields.io/codecov/c/github/VirtusLab-Open-Source/strapi-plugin-open-mercato/main?logo=codecov">
+  <a href="https://codecov.io/gh/Sensinum/strapi-plugin-open-mercato">
+    <img alt="codecov" src="https://img.shields.io/codecov/c/github/Sensinum/strapi-plugin-open-mercato/main?logo=codecov">
   </a>
 </div>
 
@@ -42,7 +42,7 @@ A Strapi plugin that connects your Strapi application with [Open Mercato](https:
 ## 📋 Requirements
 
 - Strapi v5.7.0 or later
-- Node.js 18+
+- Node.js 22+
 - An Open Mercato instance with REST API access
 - For Redis cache: a running Redis instance
 
@@ -138,10 +138,10 @@ Remember to add the corresponding environment variables to your `.env` file.
 
 ## 💬 Community Support
 
-- [GitHub](https://github.com/sensinum-lab/strapi-plugins) (Bug reports, contributions)
+- [GitHub](https://github.com/Sensinum/strapi-plugin-open-mercato) (Bug reports, contributions)
 - [Discord](https://discord.strapi.io) (For live discussion with the Community and Strapi team)
 - [Community Forum](https://forum.strapi.io) (Questions and Discussions)
 
 ## 📄 License
 
-See the [MIT License](LICENSE) file for licensing information.
+[MIT License](LICENSE) Copyright (c) [Sensinum Sp. z o.o.](https://www.sensinum.com/).

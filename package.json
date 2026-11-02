@@ -16,21 +16,21 @@
     "description": "Integrates Open Mercato products with Strapi via a simple UI and API sync"
   },
   "license": "MIT",
-  "author": "Mateusz Ziarko <mziarko@virtuslab.com>",
-  "maintainers": [
-    {
-      "name": "VirtusLab // Mateusz Ziarko",
-      "email": "mziarko@virtuslab.com",
-      "url": "https://virtuslab.com"
-    }
+  "author": "Sensinum <hello@sensinum.com>",
+  "contributors": [
+    "Mateusz Ziarko <mziarko@virtuslab.com>"
   ],
-  "homepage": "https://github.com/VirtusLab-Open-Source/strapi-plugin-open-mercato/tree/main#readme",
-  "bugs": {
-    "url": "https://github.com/VirtusLab-Open-Source/strapi-plugin-open-mercato/issues"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VirtusLab-Open-Source/strapi-plugin-open-mercato.git"
+    "url": "https://github.com/Sensinum/strapi-plugin-open-mercato.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sensinum/strapi-plugin-open-mercato/issues"
+  },
+  "homepage": "https://github.com/Sensinum/strapi-plugin-open-mercato#readme",
+  "engines": {
+    "node": ">=22.0.0 <=26.x.x",
+    "npm": ">=6.0.0"
   },
   "type": "commonjs",
   "exports": {
@@ -65,7 +65,9 @@
     "format": "prettier --write .",
     "test:server": "jest --forceExit --detectOpenHandles --config server/jest.config.js",
     "test:server:watch": "jest --forceExit --detectOpenHandles --config server/jest.config.js --watch",
-    "test:server:ci": "CI=true jest --ci --runInBand --verbose --coverage --config server/jest.config.js"
+    "test:server:ci": "CI=true jest --ci --runInBand --verbose --coverage --config server/jest.config.js",
+    "test:run": "yarn test:server",
+    "coverage": "yarn test:server:ci"
   },
   "husky": {
     "hooks": {
@@ -116,11 +118,6 @@
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0 <=22.x.x",
-    "npm": ">=8",
-    "yarn": ">=1.22.22"
   },
   "packageManager": "yarn@1.22.22"
 }
