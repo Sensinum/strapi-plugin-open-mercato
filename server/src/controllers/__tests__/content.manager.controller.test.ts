@@ -127,7 +127,7 @@ describe('content.manager.controller', () => {
       // Assert
       expect(mockBadRequest).toHaveBeenCalled();
       expect(mockBadRequest).toHaveBeenCalledWith(
-        expect.stringContaining('must contain at least 3 character'),
+        expect.stringContaining('Too small'),
         expect.objectContaining({ issues: expect.anything() })
       );
     });
@@ -145,7 +145,7 @@ describe('content.manager.controller', () => {
       // Assert
       expect(mockBadRequest).toHaveBeenCalled();
       expect(mockBadRequest).toHaveBeenCalledWith(
-        expect.stringContaining('Required'),
+        expect.stringContaining('expected string'),
         expect.objectContaining({ issues: expect.anything() })
       );
     });
@@ -192,7 +192,7 @@ describe('content.manager.controller', () => {
       // Assert
       expect(mockBadRequest).toHaveBeenCalled();
       expect(mockBadRequest).toHaveBeenCalledWith(
-        expect.stringContaining('Expected string'),
+        expect.stringContaining('expected string'),
         expect.objectContaining({ issues: expect.anything() })
       );
     });

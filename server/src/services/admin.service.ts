@@ -27,14 +27,14 @@ export const adminService = ({ strapi }: StrapiContext) => {
       return !!config?.apiUrl && !!config?.accessToken;
     },
     async updateConfig(config: SettingsConfig) {
-      const oldConfig: FullPluginConfig | null = await this.getStore().get({
+      const oldConfig = (await this.getStore().get({
         key: CONFIG_KEY,
-      });
+      })) as FullPluginConfig | null;
       await this.getStore().set({
         key: CONFIG_KEY,
         value: encryptConfig(
           {
-            ...oldConfig,
+            ...(oldConfig ?? {}),
             ...config,
           },
           encryptionKey
