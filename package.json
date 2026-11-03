@@ -69,11 +69,6 @@
     "test:run": "yarn test:server",
     "coverage": "yarn test:server:ci"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format && yarn lint && yarn test:server"
-    }
-  },
   "dependencies": {
     "@sensinum/strapi-utils": "^1.0.9",
     "@strapi/design-system": "^2.0.0-rc.23",
