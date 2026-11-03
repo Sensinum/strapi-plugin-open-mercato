@@ -41,6 +41,9 @@ jobs:
           files: coverage/lcov.info
           flags: unittest
           fail_ci_if_error: true
+          # Avoid flaky cli.codecov.io binary downloads (HTTP/2 truncate → SHASUM fail)
+          use_pypi: true
+          version: v11.3.2
 
   build:
     name: Build
