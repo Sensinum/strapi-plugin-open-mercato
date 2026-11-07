@@ -243,15 +243,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-          cache: yarn
           registry-url: https://registry.npmjs.org
 
       # Trusted publishing needs npm >= 11.5.1
       - name: Ensure npm supports OIDC trusted publishing
         run: npm install -g npm@^11.5.1
 
+      # cache: yarn probes classic Yarn before Corepack; skip and enable Berry first.
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare yarn@4.10.3 --activate
 
       - name: Install dependencies
         run: yarn install --immutable
