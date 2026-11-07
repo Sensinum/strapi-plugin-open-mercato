@@ -35,8 +35,8 @@ We use [GitHub Issues](https://github.com/sensinum-lab/strapi-plugins/issues) to
 
 Before you start contributing, ensure you have:
 
-* [Node.js](https://nodejs.org/en/) v18.x.x or higher
-* [Yarn](https://yarnpkg.com/en/) v1.22.19 or higher
+* [Node.js](https://nodejs.org/en/) 24 (see `.nvmrc`)
+* [Yarn](https://yarnpkg.com/) 4.10.3 via Corepack (`packageManager` in `package.json`)
 * Basic knowledge of Git
 
 > **Note:** This project uses Yarn as the package manager. Please use Yarn for all package installations.

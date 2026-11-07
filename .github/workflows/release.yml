@@ -24,7 +24,6 @@ on:
         default: false
 
 env:
-  NODE_VERSION: '22'
   HUSKY: '0'
 
 permissions:
@@ -243,16 +242,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
+          node-version-file: .nvmrc
           registry-url: https://registry.npmjs.org
 
-      # Trusted publishing needs npm >= 11.5.1 (Node 22 image may ship an older CLI)
+      # Trusted publishing needs npm >= 11.5.1
       - name: Ensure npm supports OIDC trusted publishing
         run: npm install -g npm@^11.5.1
 
+      # cache: yarn probes classic Yarn before Corepack; skip and enable Berry first.
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare yarn@4.10.3 --activate
+
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run tests with coverage
         run: yarn coverage
